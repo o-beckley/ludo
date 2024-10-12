@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716988093767",
+    "project_id": "ludo-fbd23",
+    "storage_bucket": "ludo-fbd23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716988093767:android:79e57af55337fa3fb0e862",
+        "android_client_info": {
+          "package_name": "com.obeckley.ludo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2dWPFk9usXOWq1DNbgLY-WCnnzAWlUkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

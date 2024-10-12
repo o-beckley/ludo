@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "716988093767",
+    "project_id": "ludo-fbd23",
+    "storage_bucket": "ludo-fbd23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716988093767:android:79e57af55337fa3fb0e862",
+        "android_client_info": {
+          "package_name": "com.obeckley.ludo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716988093767-d8cst6audfubmkniob4glafcnn1g2vul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.obeckley.ludo",
+            "certificate_hash": "f1d0de8a02f444af5fb72a0457453fba0fb1ed6b"
+          }
+        },
+        {
+          "client_id": "716988093767-lbuf9ucpv6cb2mkvsc44fcc1je27uon1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2dWPFk9usXOWq1DNbgLY-WCnnzAWlUkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716988093767-lbuf9ucpv6cb2mkvsc44fcc1je27uon1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "716988093767-6v4ffcqbalsd5rttb3agopa6ju0e9mct.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.obeckley.ludo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
