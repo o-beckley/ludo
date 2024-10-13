@@ -92,34 +92,32 @@ class CustomFilledButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Opacity(
-        opacity: disabled ? 0.32 : 1,
-        child: Material(
-          color: backgroundColor ?? context.watch<UIColors>().primary,
+    return Opacity(
+      opacity: disabled ? 0.32 : 1,
+      child: Material(
+        color: backgroundColor ?? context.watch<UIColors>().primary,
+        borderRadius: BorderRadius.circular(25),
+        child: InkWell(
+          onTap: disabled ? null : onTap,
           borderRadius: BorderRadius.circular(25),
-          child: InkWell(
-            onTap: disabled ? null : onTap,
-            borderRadius: BorderRadius.circular(25),
-            child: SizedBox(
-              height: 50,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
-                      child: Text(
-                        label,
-                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          color: color ?? context.watch<UIColors>().onPrimaryContainer
-                        ),
-                        overflow: TextOverflow.ellipsis,
+          child: SizedBox(
+            height: 50,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Text(
+                      label,
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                        color: color ?? context.watch<UIColors>().onPrimaryContainer
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
@@ -144,41 +142,39 @@ class CustomOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Opacity(
-        opacity: disabled ? 0.32 : 1,
-        child: Material(
+    return Opacity(
+      opacity: disabled ? 0.32 : 1,
+      child: Material(
+        borderRadius: BorderRadius.circular(25),
+        child: InkWell(
+          onTap: disabled ? null : onTap,
           borderRadius: BorderRadius.circular(25),
-          child: InkWell(
-            onTap: disabled ? null : onTap,
-            borderRadius: BorderRadius.circular(25),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(
-                  color: color ?? context.watch<UIColors>().onSurface,
-                  width: 1
-                )
-              ),
-              child: SizedBox(
-                height: 50,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25),
-                        child: Text(
-                          label,
-                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                            color: color ?? context.watch<UIColors>().onSurface
-                          ),
-                          overflow: TextOverflow.ellipsis,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(
+                color: color ?? context.watch<UIColors>().onSurface,
+                width: 1
+              )
+            ),
+            child: SizedBox(
+              height: 50,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Text(
+                        label,
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                          color: color ?? context.watch<UIColors>().onSurface
                         ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

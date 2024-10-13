@@ -22,7 +22,7 @@ class AuthService extends ChangeNotifier {
     return _player;
   }
 
-  bool get isSignedIn => _googleSignIn.currentUser != null;
+  bool get isSignedIn => firebaseUser != null;
 
   CollectionReference<Player> get playersReference => _firestore.collection('players').withConverter<Player>(
     fromFirestore: (snapshot, options){
@@ -105,12 +105,18 @@ class AuthService extends ChangeNotifier {
   }
   
   Future<Player?> fetchProfile() async{
-    if(isSignedIn){
-      _player = await playersReference.doc(firebaseUser!.uid).get().then((p) => p.data());
-      notifyListeners();
-      return _player;
+    try{
+      if(isSignedIn){
+        _player = await playersReference.doc(firebaseUser!.uid).get().then((p) => p.data());
+        notifyListeners();
+        return _player;
+      }
+      else{
+        return null;
+      }
     }
-    else{
+    catch(e){
+      log(e.toString());
       return null;
     }
   }

@@ -201,9 +201,10 @@ class _PlayerSectionState extends State<PlayerSection> with TickerProviderStateM
         radius: 0.1.sw,
         shape: BoxShape.circle,
       ),
-      playerIndex == widget.index
-      ? _buildDice()
-      : const SizedBox.shrink(),
+      if(playerIndex == widget.index)
+        _buildDice()
+      else
+        const SizedBox.shrink(),
     ];
     return Align(
       alignment: alignment,
